@@ -1,7 +1,7 @@
 import * as gulp from 'gulp';
 import * as browserify from 'browserify';
 import * as source from 'vinyl-source-stream';
-import tsify from 'tsify';
+import * as tsify from 'tsify';
 import * as watchify from 'watchify';
 import * as gutil from 'gulp-util';
 import * as uglify from 'gulp-uglify';
@@ -15,7 +15,10 @@ const paths = {
 const watchedBrowserify = watchify(browserify({
   basedir: '.',
   debug: true,
-  entries: 'src/index.ts',
+  entries: [
+    'src/index.ts',
+    'typings/browserify/index.d.ts',
+  ],
   cache: {},
   packageCache: {}
 })

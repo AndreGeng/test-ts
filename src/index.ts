@@ -1,15 +1,8 @@
-import greeter from './greeter';
+import { sayHello } from "./greet";
 
-class Student {
-  fullName: string;
-  constructor(public firstName: string,
-    public middleInitial: string,
-    public lastName: string) {
-    this.fullName = firstName + " " + middleInitial + " " + lastName;
-  }
+function showHello(divName: string, name: string) {
+    const elt = document.getElementById(divName);
+    elt.innerText = sayHello(name);
 }
 
-let user = new Student("Jane123", "M.", "User");
-
-const greeting = document.getElementById('greeting');
-greeting.innerText = greeter(user);
+showHello("greeting", "TypeScript");

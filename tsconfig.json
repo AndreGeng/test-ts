@@ -1,11 +1,13 @@
 {
-  "files": [
-    "src/index.ts",
-    "src/greeter.ts",
-    "typings/index.d.ts"
-  ],
   "compilerOptions": {
+    "typeRoots" : ["./typings"],
     "noImplicitAny": true,
-    "target": "es5"
+    "target": "es5",
+    "baseUrl": ".",
+    "paths": { 
+      "browserify": [ 
+        "typings/browserify/index.d.ts"
+      ]
+    }
   }
 }
