@@ -1,13 +1,10 @@
 {
   "compilerOptions": {
-    "typeRoots" : ["./typings"],
     "noImplicitAny": true,
     "target": "es5",
     "baseUrl": ".",
     "paths": { 
-      "browserify": [ 
-        "typings/browserify/index.d.ts"
-      ]
+      "*" : ["typings/*"]
     }
   }
 }

@@ -17,7 +17,6 @@ const watchedBrowserify = watchify(browserify({
   debug: true,
   entries: [
     'src/index.ts',
-    'typings/browserify/index.d.ts',
   ],
   cache: {},
   packageCache: {}
@@ -33,10 +32,12 @@ const bundle = function() {
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('dist'));
 };
-gulp.task('copy-html', function() {
+function copyHtml() {
   return gulp.src(paths.pages)
     .pipe(gulp.dest('dist'));
-});
-gulp.task('default', ['copy-html'], bundle);
+}
 watchedBrowserify.on('update', bundle);
 watchedBrowserify.on('log', gutil.log);
+
+export { copyHtml };
+export default gulp.series(copyHtml, bundle);
