@@ -1,12 +1,13 @@
-import * as gulp from 'gulp';
-import * as browserify from 'browserify';
-import * as source from 'vinyl-source-stream';
-import * as tsify from 'tsify';
-import * as watchify from 'watchify';
-import * as gutil from 'gulp-util';
-import * as uglify from 'gulp-uglify';
-import * as sourcemaps from 'gulp-sourcemaps';
-import * as buffer from 'vinyl-buffer';
+import gulp from 'gulp';
+import browserify from 'browserify';
+import source from 'vinyl-source-stream';
+import tsify from 'tsify';
+import watchify from 'watchify';
+import gutil from 'gulp-util';
+import uglify from 'gulp-uglify';
+import sourcemaps from 'gulp-sourcemaps';
+import buffer from 'vinyl-buffer';
+import DataSet from './src/lib/test';
 
 const paths = {
   pages: ['src/*.html']

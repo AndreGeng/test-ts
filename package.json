@@ -4,13 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "ts-node ./node_modules/.bin/gulp -f gulpfile.ts",
+    "build": "ts-node --no-cache ./node_modules/.bin/gulp -f gulpfile.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/gulp": "^4.0.5",
+    "@types/gulp-sourcemaps": "0.0.32",
+    "@types/gulp-uglify": "^3.0.6",
+    "@types/gulp-util": "^3.0.34",
+    "@types/vinyl-buffer": "^1.0.0",
+    "@types/vinyl-source-stream": "0.0.30",
+    "@types/watchify": "^3.7.4",
     "browserify": "^16.2.3",
     "gulp": "^4.0.0",
     "gulp-sourcemaps": "^2.6.4",

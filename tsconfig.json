@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
+    "esModuleInterop": true,
+    "allowJs": true,
     "noImplicitAny": true,
     "target": "es5",
+    "module": "commonjs",
     "baseUrl": ".",
     "paths": { 
       "*" : ["typings/*"]
